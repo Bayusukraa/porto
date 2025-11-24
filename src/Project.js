@@ -33,7 +33,7 @@ const projectList = [
     title: "Web Ekstrakurikuler Esport",
     desc: "IoT lamp controlled via NodeMCU using a mobile app with real-time status monitoring.",
     tech: ["IoT", "NodeMCU"],
-    img: "esp.png",
+    img: "ESP.png",
     demo: "#",
     repo: "#",
   },
@@ -91,3 +91,4 @@ export default function ProjectPage() {
     </div>
   );
 }
+
