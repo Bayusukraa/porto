@@ -1,0 +1,126 @@
+/* ===== PAGE WRAPPER ===== */
+
+.project-page {
+    background: linear-gradient(135deg, #0d1117, #1b2330);
+  color: #fff;
+  padding: 4rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.proj-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.proj-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-top: 6px;
+  margin-bottom: 40px;
+}
+
+/* ===== GRID ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
+}
+
+/* ===== CARD ===== */
+.project-card {
+  background: #141418;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+.project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* BODY */
+.project-body {
+  padding: 18px 22px;
+}
+
+.project-body h2 {
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+.project-body p {
+  color: #bfc7d8;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* jumlah baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* TECH TAGS */
+.project-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.project-tech span {
+  background: rgba(255,255,255,0.07);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #67b8ff;
+}
+
+/* ACTIONS */
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-actions a {
+  color: #00c6ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-actions a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

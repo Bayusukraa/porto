@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hasil Form</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background:#0d1117; color:white; }
+    .card { background:#161b22; padding:20px; border-radius:12px; margin-bottom:15px; }
+
+    .close-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background: rgba(255,255,255,0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+<a href="/index.html" class="close-btn">×</a>
+
+  <h1>Pesan Masuk</h1>
+  <div id="list"></div>
+
+<script>
+  const daftar = JSON.parse(localStorage.getItem("hasilForms")) || [];
+  const container = document.getElementById("list");
+
+  daftar.forEach((item, index) => {
+    container.innerHTML += `
+      <div class="card">
+        <h3>Pesan ${index + 1}</h3>
+        <p><strong>Nama:</strong> ${item.name}</p>
+        <p><strong>Email:</strong> ${item.email}</p>
+        <p><strong>Pesan:</strong> ${item.message}</p>
+      </div>
+    `;
+  });
+</script>
+
+</body>
+</html>
